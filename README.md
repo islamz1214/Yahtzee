@@ -1,5 +1,5 @@
 # Yahtzee
 Javascript Game
 
-The game follows the Yahtzee rules. 
+The game follows the traditional Yahtzee rules. 
 
