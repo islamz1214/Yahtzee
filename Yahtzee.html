@@ -3,7 +3,11 @@
 <html>
 <head>
 <style> body {background-color: lightblue;} </style>
-<script src="Yahtzee.js"></script>    
+<script type="module" src="index.js">
+
+
+
+</script>    
 </head>
 
 <body>
@@ -36,7 +40,7 @@
 
 <table>
 <tr>
-<td><input type="button" accesskey="r" value="Roll Dice!" onClick="roll()"></td>
+<td><input type="button" value="Roll Dice!" id="roll"></td>
 <td>Count: </td>
 <td id="countNum"></td>
 </tr>
@@ -50,53 +54,53 @@
 <th align=center> score </th></tr>
 <tr><td align=right>1's</td><td align=center>anytime</td>
 <td align=center> the sum of 1's only.</td>
-<td align=center id=score0 onClick="updateScore(0)" onmouseover="mouseOver(0)" onmouseout="mouseOut(0)"></td></tr>
+<td align=center id=scoreOnes></td></tr>
 <tr><td align=right>2's</td><td align=center>anytime</td>
 <td align=center> the sum of 2's only.</td>
-<td align=center id=score1 onClick="updateScore(1)" onmouseover="mouseOver(1)" onmouseout="mouseOut(1)">   </td></tr>
+<td align=center id=scoreTwos>   </td></tr>
 <tr><td align=right>3's</td><td align=center>anytime</td>
 <td align=center> the sum of 3's only.</td>
-<td align=center id=score2 onClick="updateScore(2)" onmouseover="mouseOver(2)" onmouseout="mouseOut(2)">   </td></tr>
+<td align=center id=scoreThrees>   </td></tr>
 <tr><td align=right>4's</td><td align=center>anytime</td>
 <td align=center> the sum of 4's only.</td>
-<td align=center id=score3 onClick="updateScore(3)" onmouseover="mouseOver(3)" onmouseout="mouseOut(3)">  </td></tr>
+<td align=center id=scoreFours>  </td></tr>
 <tr><td align=right>5's</td><td align=center>anytime</td>
 <td align=center> the sum of 5's only.</td>
-<td align=center id=score4 onClick="updateScore(4)" onmouseover="mouseOver(4)" onmouseout="mouseOut(4)">  </td></tr>
+<td align=center id=scoreFives>  </td></tr>
 <tr><td align=right>6's</td>
 <td align=center>anytime</td>
 <td align=center> the sum of 6's only.</td>
-<td align=center id=score5 onClick="updateScore(5)" onmouseover="mouseOver(5)" onmouseout="mouseOut(5)">  </td></tr>
+<td align=center id=scoreSixes>  </td></tr>
 <tr><td align=right>3 of a kind</td>
 <td align=center> at least 3 dice the same</td>
 <td align=center>
 the total of all dice
-<td align=center id=score6 onClick="updateScore(6)" onmouseover="mouseOver(6)" onmouseout="mouseOut(6)">  </td></tr>
+<td align=center id=scoreThreeOfAKind>  </td></tr>
 <tr><td align=right>4 of a kind</td>
 <td align=center>at least 4 dice the same</td>
 <td align=center> the total of all dice</td>
-<td align=center id=score7 onClick="updateScore(7)" onmouseover="mouseOver(7)" onmouseout="mouseOut(7)"></td></tr>
+<td align=center id=scoreFourOfAKind></td></tr>
 <tr><td align=right>Full house</td>
 <td align=center> 3 the same and 2 the same</td>
 <td align=center>
-25 </td><td align=center id=score8 onClick="updateScore(8)" onmouseover="mouseOver(8)" onmouseout="mouseOut(8)">   </td></tr>
+25 </td><td align=center id=scoreFullHouse>   </td></tr>
 <tr><td align=right>Sm straight</td>
 <td align=center> 4 in a row  </td> <td align=center> 30 </td>
-<td align=center id=score9 onClick="updateScore(9)" onmouseover="mouseOver(9)" onmouseout="mouseOut(9)"> </td></tr>
+<td align=center id=scoreSmallStraight> </td></tr>
 <tr><td align=right>Lg straight</td>
 <td align=center> 5 in a row </td>
 <td align=center>40</td>
-<td align=center id=score10 onClick="updateScore(10)" onmouseover="mouseOver(10)" onmouseout="mouseOut(10)">  </td></tr>
+<td align=center id=scoreLargeStraight>  </td></tr>
 <tr><td align=right>Yahtzee</td>
 <td align=center> 5 the same  </td>
 <td align=center>50</td>
-<td align=center id=score11 onClick="updateScore(11)" onmouseover="mouseOver(11)" onmouseout="mouseOut(11)"> </td></tr>
+<td align=center id=scoreYahtzee> </td></tr>
 <tr><td align=right>Chance</td>
 <td align=center> anytime</td>
 <td align=center> the total of all dice</td>
-<td align=center id=score12 onClick="updateScore(12)" onmouseover="mouseOver(12)" onmouseout="mouseOut(12)">  </td></tr>
+<td align=center id=scoreChance>  </td></tr>
 <tr><td align=center>Total score</td>
-<td align=center id=totalScore></td></tr>
+<td align=center id=scoreTotal></td></tr>
 </table>
 
 <br>
